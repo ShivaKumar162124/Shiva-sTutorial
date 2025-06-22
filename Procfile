@@ -1,0 +1,1 @@
+web: gunicorn shivas_tutorial.wsgi

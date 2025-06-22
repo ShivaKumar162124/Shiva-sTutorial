@@ -1,1 +1,0 @@
-web: gunicorn tutorial_sessions.wsgi --log-file -
