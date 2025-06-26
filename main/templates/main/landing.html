@@ -28,51 +28,90 @@
     }
 
     .overlay {
-      background-color: rgba(255, 255, 255, 0.9);
-      padding: 40px 30px;
-      border-radius: 12px;
+      background-color: rgba(255, 255, 255, 0.92);
+      padding: 50px 35px;
+      border-radius: 14px;
       text-align: center;
-      max-width: 700px;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
-      color: #222; /* Ensure dark text inside overlay */
+      max-width: 720px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+      animation: fadeIn 1.2s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     .overlay img {
-      max-width: 160px;
-      margin-bottom: 20px;
+      max-width: 140px;
+      margin-bottom: 18px;
     }
 
     h1 {
       font-weight: 700;
-      color: #007bff; /* Bootstrap primary color */
+      font-size: 32px;
+      color: #007bff;
+      margin-bottom: 10px;
+    }
+
+    .lead {
+      font-size: 18px;
+      color: #444;
+      margin-bottom: 20px;
     }
 
     .btn-custom {
-      padding: 12px 24px;
+      padding: 12px 28px;
       font-size: 18px;
-      border-radius: 6px;
-      margin: 10px;
+      border-radius: 8px;
+      margin: 12px;
       min-width: 180px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .btn-custom:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(0, 123, 255, 0.2);
     }
 
     footer {
-      margin-top: 30px;
+      margin-top: 35px;
       font-size: 14px;
-      color: #555;
+      color: #666;
+    }
+
+    /* Bright Marquee for Announcement */
+    .announcement {
+      font-size: 20px;
+      font-weight: 700;
+      color: #0dcaf0;
+      text-shadow: 0 0 4px #fff, 0 0 6px #0dcaf0;
+      margin-bottom: 20px;
     }
 
     @media (max-width: 768px) {
       .overlay {
         margin: 20px;
-        padding: 30px 20px;
-        max-width: 90vw;
+        padding: 35px 20px;
+        max-width: 92vw;
       }
 
       .btn-custom {
         font-size: 16px;
-        min-width: auto;
         width: 100%;
         margin: 10px 0;
+      }
+
+      h1 {
+        font-size: 26px;
+      }
+
+      .lead {
+        font-size: 16px;
+      }
+
+      .announcement {
+        font-size: 18px;
       }
     }
   </style>
@@ -80,12 +119,26 @@
 <body>
 
   <div class="overlay" role="main" aria-label="Welcome to Shiva's Tutorial">
+
     <!-- Logo -->
     <img src="{% static 'main/logo.png' %}" alt="Shiva's Tutorial Logo" />
 
     <h1>Welcome to Shiva’s Tutorial</h1>
     <p class="lead">1-on-1 online and offline classes for students from Class 1 to Diploma</p>
 
+    <!-- Announcement Section -->
+   {% if announcement %}
+  <marquee behavior="scroll" direction="left" scrollamount="6" 
+    onmouseover="this.stop();" onmouseout="this.start();" 
+    style="color: #FF6600;  /* bright orange */
+           font-weight: 700; 
+           font-size: 20px; 
+           text-shadow:
+             0 0 8px #FF6600,
+             0 0 15px #FF9933;">
+    {{ announcement.message }}
+  </marquee>
+{% endif %}
     <div class="mt-4">
       <a href="https://bit.ly/4j7Hdye" class="btn btn-success btn-custom" target="_blank" rel="noopener noreferrer">Register as Student</a>
       <a href="https://bit.ly/43kCof7" class="btn btn-outline-primary btn-custom" target="_blank" rel="noopener noreferrer">Become a Tutor</a>
