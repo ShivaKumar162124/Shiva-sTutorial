@@ -5,25 +5,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
   <title>Shiva’s Tutorial</title>
 
   <!-- ================= OPEN GRAPH (SOCIAL PREVIEW) ================= -->
+  {% comment %} Dynamically generate full URL for the logo {% endcomment %}
   <meta property="og:title" content="Shiva’s Tutorial" />
-<meta property="og:description" content="1-on-1 online and offline classes for students from Class 1 to Diploma" />
-<meta property="og:image" content="https://shiva-stutorials.onrender.com/staticfiles/main/logo.png" />
-<meta property="og:image:alt" content="Shiva's Tutorial Logo" />
-<meta property="og:image:type" content="image/png" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-<meta property="og:url" content="https://shiva-stutorials.onrender.com/" />
-<meta property="og:type" content="website" />
+  <meta property="og:description" content="1-on-1 online and offline classes for students from Class 1 to Diploma" />
+  <meta property="og:image" content="{{ request.scheme }}://{{ request.get_host }}{% static 'main/logo.png' %}" />
+  <meta property="og:image:alt" content="Shiva's Tutorial Logo" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="{{ request.scheme }}://{{ request.get_host }}/" />
+  <meta property="og:type" content="website" />
 
   <!-- ================= TWITTER / X PREVIEW ================= -->
- <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Shiva’s Tutorial" />
-<meta name="twitter:description" content="1-on-1 online and offline classes for students from Class 1 to Diploma" />
-<meta name="twitter:image" content="https://shiva-stutorials.onrender.com/staticfiles/main/logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Shiva’s Tutorial" />
+  <meta name="twitter:description" content="1-on-1 online and offline classes for students from Class 1 to Diploma" />
+  <meta name="twitter:image" content="{{ request.scheme }}://{{ request.get_host }}{% static 'main/logo.png' %}" />
 
   <!-- ================= STYLES & FONTS ================= -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
@@ -129,5 +129,3 @@
 
 </body>
 </html>
-
-
