@@ -462,6 +462,27 @@
                 align-items: center;
             }
         }
+        /* Scrolling Ticker */
+.ticker-wrapper {
+    background: #f1f5f9;
+    padding: 14px 40px;
+    border-bottom: 1px solid #e2e8f0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.ticker-content {
+    display: inline-block;
+    animation: scrollTicker 20s linear infinite;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--primary-navy);
+}
+
+@keyframes scrollTicker {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
     </style>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-H735DP17T5"></script>
@@ -503,11 +524,11 @@
         </div>
 
         <!-- News Ticker - Marquee -->
-        <div class="news-ticker-container">
-            <marquee behavior="scroll" direction="left" scrollamount="4">
-                🚀 VIP Program launches 1st April! Earn points → 100+ points = Monthly Certificate 🎓 | Book your free 1-on-1 demo today!
-            </marquee>
-        </div>
+        <div class="ticker-wrapper">
+    <div class="ticker-content">
+        🚀 VIP Program launches 1st April! Earn points → 100+ points = Monthly Certificate 🎓 | Book your free 1-on-1 demo today!
+    </div>
+</div>
 
         <!-- Main Content -->
         <div class="content-section">
@@ -563,7 +584,7 @@
                     <div class="vip-point"><i class="fas fa-certificate"></i> 100+ points = Monthly Certificate 🎓</div>
                     <div class="vip-point"><i class="fas fa-chart-line"></i> Track impact with Weekly Activity Log</div>
                 </div>
-                <a href="https://shiva-stutorials.onrender.com" class="vip-cta">Join Our Volunteer Community →</a>
+                <a href="https://forms.gle/J49a4rop6TqFJHZK8" target="_blank" class="vip-cta">Join Our Volunteer Community →</a>
             </div>
 
             <!-- Trust Indicators -->
