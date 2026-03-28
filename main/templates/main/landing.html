@@ -510,6 +510,85 @@ body {
         gap: 25px;
     }
 }
+/* Fix for all devices */
+* {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.main-container {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Contact section responsiveness */
+.contact-section a {
+    min-width: 140px;
+    max-width: 100%;
+}
+
+.contact-section > div {
+    flex-wrap: wrap;
+}
+
+/* Footer responsiveness */
+.footer {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.footer-content {
+    flex-wrap: wrap;
+}
+
+.footer-social-section {
+    text-align: center;
+}
+
+.footer-social {
+    justify-content: center;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+    .contact-section > div {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-social-section {
+        align-items: center;
+    }
+    
+    .highlight-stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .vip-points {
+        flex-direction: column;
+        align-items: center;
+    }
+}
     </style>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-H735DP17T5"></script>
