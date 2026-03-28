@@ -148,34 +148,17 @@
             margin-top: 5px;
         }
 
-        /* News Ticker - Professional */
+        /* News Ticker - Marquee */
         .news-ticker-container {
             background: #f1f5f9;
-            padding: 18px 40px;
+            padding: 14px 40px;
             border-bottom: 1px solid #e2e8f0;
         }
 
-        .ticker-content {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-        }
-
-        .ticker-badge {
-            background: var(--accent-gold);
-            color: var(--primary-navy);
-            padding: 6px 15px;
-            border-radius: 20px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            white-space: nowrap;
-        }
-
-        .ticker-text {
+        marquee {
             font-size: 1rem;
             font-weight: 500;
-            color: var(--text-dark);
+            color: var(--primary-navy);
         }
 
         /* Main Content */
@@ -202,6 +185,62 @@
             bottom: -15px;
             left: 50%;
             transform: translateX(-50%);
+        }
+
+        /* VIP Section */
+        .vip-section {
+            background: linear-gradient(135deg, #f9f3e6 0%, #fff5e6 100%);
+            border-radius: 16px;
+            padding: 35px 30px;
+            margin-bottom: 40px;
+            text-align: center;
+            border-left: 5px solid var(--accent-gold);
+        }
+
+        .vip-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-navy);
+            margin-bottom: 15px;
+        }
+
+        .vip-points {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .vip-point {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1rem;
+            color: var(--text-dark);
+        }
+
+        .vip-point i {
+            color: var(--accent-gold);
+            font-size: 1.2rem;
+        }
+
+        .vip-cta {
+            display: inline-block;
+            background: var(--primary-navy);
+            color: white;
+            padding: 10px 24px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 15px;
+            transition: var(--transition);
+        }
+
+        .vip-cta:hover {
+            background: var(--secondary-blue);
+            transform: translateY(-2px);
+            color: white;
         }
 
         /* Professional Grid */
@@ -305,7 +344,7 @@
             margin-top: 3px;
         }
 
-        /* Contact Section - Clean (No Social Icons Here) */
+        /* Contact Section */
         .contact-section {
             text-align: center;
             padding-top: 40px;
@@ -329,7 +368,7 @@
             text-decoration: underline;
         }
 
-        /* Footer - Clean & Professional (Social Icons Here Only) */
+        /* Footer */
         .footer {
             background: var(--primary-navy);
             color: white;
@@ -406,110 +445,32 @@
             margin-bottom: 8px;
         }
 
-        .footer-note {
-            font-size: 0.9rem;
-            opacity: 0.8;
-            font-style: italic;
-        }
-
         /* Responsive */
-        @media (max-width: 992px) {
-            .services-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
         @media (max-width: 768px) {
-            .main-container {
-                border-radius: 12px;
-            }
-            
-            .header-section {
-                padding: 40px 25px 30px;
-            }
-            
-            .site-title {
-                font-size: 2.2rem;
-            }
-            
-            .site-tagline {
-                font-size: 1.1rem;
-            }
-            
-            .content-section {
-                padding: 40px 25px;
-            }
-            
-            .section-heading {
-                font-size: 1.8rem;
-            }
-            
-            .services-grid {
-                grid-template-columns: 1fr;
-                gap: 25px;
-            }
-            
-            .highlight-stats {
-                gap: 25px;
-            }
-            
-            .stat-number {
-                font-size: 1.8rem;
-            }
-            
-            .news-ticker-container {
-                padding: 15px 25px;
-            }
-            
-            .ticker-content {
+            .vip-points {
                 flex-direction: column;
-                text-align: center;
-                gap: 10px;
+                align-items: center;
+                gap: 12px;
             }
             
             .footer-content {
                 grid-template-columns: 1fr;
-                gap: 30px;
                 text-align: center;
             }
             
             .footer-social-section {
                 align-items: center;
             }
-            
-            .footer {
-                padding: 30px 25px 20px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .header-section {
-                padding: 30px 20px;
-            }
-            
-            .site-title {
-                font-size: 1.9rem;
-            }
-            
-            .content-section {
-                padding: 30px 20px;
-            }
-            
-            .highlight-stats {
-                flex-direction: column;
-                gap: 20px;
-            }
         }
     </style>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-H735DP17T5"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-H735DP17T5');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H735DP17T5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-H735DP17T5');
+    </script>
 </head>
 <body>
     <div class="main-container">
@@ -541,12 +502,11 @@
             </div>
         </div>
 
-        <!-- News Ticker -->
+        <!-- News Ticker - Marquee -->
         <div class="news-ticker-container">
-            <div class="ticker-content">
-                <span class="ticker-badge">New Enrollment</span>
-                <span class="ticker-text">⏳ Limited spots remaining for March 2026 batches! Book a free demo session with our qualified tutors today.</span>
-            </div>
+            <marquee behavior="scroll" direction="left" scrollamount="4">
+                🚀 VIP Program launches 1st April! Earn points → 100+ points = Monthly Certificate 🎓 | Book your free 1-on-1 demo today!
+            </marquee>
         </div>
 
         <!-- Main Content -->
@@ -595,6 +555,17 @@
                 </a>
             </div>
 
+            <!-- VIP Program Section -->
+            <div class="vip-section">
+                <div class="vip-title">🚀 Volunteer Impact Program (VIP)</div>
+                <div class="vip-points">
+                    <div class="vip-point"><i class="fas fa-star"></i> Earn points for contributions</div>
+                    <div class="vip-point"><i class="fas fa-certificate"></i> 100+ points = Monthly Certificate 🎓</div>
+                    <div class="vip-point"><i class="fas fa-chart-line"></i> Track impact with Weekly Activity Log</div>
+                </div>
+                <a href="https://shiva-stutorials.onrender.com" class="vip-cta">Join Our Volunteer Community →</a>
+            </div>
+
             <!-- Trust Indicators -->
             <div class="trust-section">
                 <h4 class="trust-title">Why Choose Shiva's Tutorial?</h4>
@@ -618,17 +589,16 @@
                 </div>
             </div>
 
-            <!-- Contact Section - Clean (Email Only) -->
+            <!-- Contact Section -->
             <div class="contact-section">
                 <p class="contact-info">
                     Have questions? Contact us at 
                     <a href="mailto:shivastutorial.info@gmail.com">shivastutorial.info@gmail.com</a>
                 </p>
-                <!-- NO SOCIAL MEDIA ICONS HERE -->
             </div>
         </div>
 
-        <!-- Footer - Social Media Icons Here Only -->
+        <!-- Footer -->
         <div class="footer">
             <div class="footer-content">
                 <div class="footer-brand">
@@ -662,12 +632,11 @@
     </div>
 
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Smooth link handling -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Add smooth opening for external links
             document.querySelectorAll('a[target="_blank"]').forEach(link => {
                 link.addEventListener('click', function(e) {
                     e.preventDefault();
