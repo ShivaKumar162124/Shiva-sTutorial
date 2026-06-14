@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'tutorial_sessions',
     'main',
     'accounts',
+    'solutions',  
 ]
 
 MIDDLEWARE = [
