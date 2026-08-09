@@ -69,6 +69,37 @@
             box-shadow: var(--shadow);
             border: 1px solid #eaeaea;
         }
+   /* Hero Section */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, var(--primary-navy) 0%, var(--secondary-blue) 100%);
+    color: white;
+}
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+.hero p {
+    font-size: 1.3rem;
+    opacity: 0.9;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+.btn-primary {
+    background: var(--accent-gold);
+    color: var(--primary-navy);
+    padding: 15px 40px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+.btn-primary:hover {
+    background: white;
+    transform: translateY(-3px);
+}
 
         .header-section {
             background: linear-gradient(135deg, var(--primary-navy) 0%, var(--secondary-blue) 100%);
@@ -459,6 +490,12 @@
 </head>
 <body>
     <div class="main-container">
+       <!-- Hero Section -->
+<div class="hero">
+    <h1>Expert 1-on-1 Tutoring</h1>
+    <p>Personalized learning for every student — from Class 1 to Diploma.</p>
+    <a href="#services" class="btn-primary">Explore Our Services</a>
+</div>
         <div class="header-section">
             <div class="logo-container">
                 <img src="{% static 'main/logo.png' %}" alt="Shiva's Tutorial Logo" class="logo" />
@@ -656,6 +693,9 @@
                             <a href="https://www.linkedin.com/in/somu-shiva-kumar-720a52366/" target="_blank" aria-label="LinkedIn">
                                 <i class="fab fa-linkedin-in"></i>
                             </a>
+                            <a href="https://t.me/ShivaTutorials" target="_blank" aria-label="Telegram">
+    <i class="fab fa-telegram"></i>
+</a>
                         </div>
                     </div>
                 </div>
