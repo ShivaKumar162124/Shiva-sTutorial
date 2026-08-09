@@ -6,9 +6,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shiva's Tutorial | Premium 1-on-1 Academic Tutoring</title>
-    <meta name="description" content="Expert 1-on-1 tutoring for students Class 1 to Diploma. Structured learning, qualified tutors, and proven results." />
+    <meta name="description" content="Expert 1-on-1 tutoring for students KG to PG. Structured learning, qualified tutors, and proven results." />
     <meta property="og:title" content="Shiva's Tutorial | Premium Academic Tutoring" />
-    <meta property="og:description" content="Expert 1-on-1 tutoring for students Class 1 to Diploma." />
+    <meta property="og:description" content="Expert 1-on-1 tutoring for students KG to PG." />
     <meta property="og:image" content="https://shiva-stutorials.onrender.com/static/main/logo.png" />
     <meta property="og:url" content="https://shiva-stutorials.onrender.com" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -54,14 +54,25 @@
             border: 1px solid #eaeaea;
         }
 
+        /* Logo Bar */
+        .logo-bar {
+            text-align: center;
+            padding: 20px 20px 10px;
+            background: var(--primary);
+        }
+        .logo-bar img {
+            height: 70px;
+            filter: brightness(0) invert(1);
+        }
+
         /* Hero Section */
         .hero {
             text-align: center;
-            padding: 80px 20px 60px;
+            padding: 60px 20px 50px;
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
         }
-        .hero h1 { font-size: 3rem; margin-bottom: 15px; }
+        .hero h1 { font-size: 2.8rem; margin-bottom: 15px; }
         .hero p { font-size: 1.2rem; opacity: 0.9; max-width: 650px; margin: 0 auto 25px; }
         .btn-primary {
             background: var(--gold);
@@ -121,21 +132,31 @@
         .step h3 { color: var(--primary); margin-bottom: 8px; }
         .step p { color: var(--text-light); font-size: 0.95rem; }
 
-        /* Header */
-        .header-section {
+        /* Stats */
+        .stats-section {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
-            padding: 40px 40px 30px;
+            padding: 30px 20px;
             text-align: center;
-            position: relative;
-            overflow: hidden;
         }
-        .logo { height: 90px; filter: brightness(0) invert(1); margin-bottom: 20px; }
-        .site-title { font-family: 'Playfair Display', serif; font-size: 2.8rem; }
-        .site-tagline { font-size: 1.2rem; opacity: 0.9; max-width: 650px; margin: 0 auto 15px; }
-        .highlight-stats { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-top: 20px; }
-        .stat-number { font-size: 2rem; font-weight: 700; color: var(--gold); display: block; }
-        .stat-label { font-size: 0.85rem; opacity: 0.8; text-transform: uppercase; letter-spacing: 1px; }
+        .stats-section .highlight-stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .stats-section .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--gold);
+            display: block;
+        }
+        .stats-section .stat-label {
+            font-size: 0.85rem;
+            opacity: 0.8;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
 
         /* Ticker */
         .ticker-wrapper {
@@ -320,10 +341,15 @@
 
 <div class="main-container">
 
+    <!-- Logo Bar (Top) -->
+    <div class="logo-bar">
+        <img src="{% static 'main/logo.png' %}" alt="Shiva's Tutorial Logo" />
+    </div>
+
     <!-- Hero -->
     <div class="hero">
         <h1>Expert 1-on-1 Tutoring</h1>
-        <p>Personalized learning for every student — from Class 1 to Diploma.</p>
+        <p>Personalized learning for every student — from KG to PG.</p>
         <a href="#services" class="btn-primary">Explore Our Services</a>
     </div>
 
@@ -355,11 +381,8 @@
         </div>
     </div>
 
-    <!-- Header -->
-    <div class="header-section">
-        <img src="{% static 'main/logo.png' %}" alt="Shiva's Tutorial Logo" class="logo" />
-        <h1 class="site-title">Shiva's Tutorial</h1>
-        <p class="site-tagline">Expert 1-on-1 academic tutoring for students from Class 1 to Diploma</p>
+    <!-- Stats -->
+    <div class="stats-section">
         <div class="highlight-stats">
             <div class="stat-item"><span class="stat-number">1-on-1</span><span class="stat-label">Personalized</span></div>
             <div class="stat-item"><span class="stat-number">12+</span><span class="stat-label">Subjects</span></div>
@@ -370,7 +393,7 @@
 
     <!-- Ticker -->
     <div class="ticker-wrapper">
-        <div class="ticker-content">🎓 Book your free 1-on-1 demo today! | Personalized tutoring for Class 1 to Diploma.</div>
+        <div class="ticker-content">🎓 Book your free 1-on-1 demo today! | Personalized tutoring for KG to PG.</div>
     </div>
 
     <!-- Services -->
